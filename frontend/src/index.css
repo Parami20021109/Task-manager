@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --neon-primary: #00f3ff;
+  /* Cyan */
+  --neon-secondary: #bc13fe;
+  /* Purple */
+  --neon-accent: #ff0055;
+  /* Pink */
+
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #050505;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #050505;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-primary);
+}
+
+/* Glass & Neon Utilities */
+.neon-glass {
+  background: rgba(10, 10, 12, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.neon-border-primary {
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.neon-card-hover:hover {
+  border-color: var(--neon-primary);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+}
+
+/* Input Styles */
+.neon-input {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+  border-color: var(--neon-secondary);
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+  outline: none;
+}
